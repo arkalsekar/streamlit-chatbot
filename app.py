@@ -23,11 +23,15 @@ st.title("Rule based Chatbot")
 st.subheader("This is a Rule based Chatbot made using NlTK and Python by Abdul Rehman ")
 
 
-st.write("Initialize the Chat bot By Typing Hi ")
-ref = st.text_input("Start your chat here")
+def main():
+    st.write("Initialize the Chat bot By Typing Hi ")
+    ref = st.text_input("Start your chat here")
 
-# a = st.text_input("Initialize your Conversation By Typing Hi")
-# chat.converse()
-chat = Chat(pairs, reflections)
-respo = chat.respond(ref)
-st.write(respo)
+    # a = st.text_input("Initialize your Conversation By Typing Hi")
+    # chat.converse()
+    chat = Chat(pairs, reflections)
+    respo = chat.respond(ref)
+    st.write(respo)
+
+if __name__=="__main__":
+    main()
